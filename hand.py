@@ -8,7 +8,7 @@ class hand( object ) :
     def __init__( self ) :
         # self.cards = self.__generateHand()
         self.cards = self.__generateHand()
-        self.fitness = []
+        self.fitness = 0
 
     def __str__( self ) :
        returnString = ""
@@ -96,15 +96,17 @@ class hand( object ) :
 
         # FULL HOUSE
         # if three cards of same rank, two of a different matching rank
-        checkCardType = self.cards[0][0]
-        count = 0
-        for cardType, suit in self.cards:
-            if cardType == checkCardType:
-                count += 1
-            if cardType != checkCardType:
-                checkCardType = cardType
-                count = 1
-        if count == 2 or count == 3:
+        # split up hand into first two cards, last two cards, and middle card
+        # return if first two cards match, last two cards match, and middle card matches either
+        group1 = self.cards[0:2] # first two cards in hand
+        group2 = self.cards[3:5] # last two cards in hand
+        middle = self.cards[2] # middle card
+        group1type = group1[0][0]
+        group2type = group2[0][0]
+
+        if (group1type == group1[1][0] and
+            group2type == group2[1][0] and
+            (middle[0] == group1type or middle[0] == group2type)):
             self.fitness = 60
             return 60
 
