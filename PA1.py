@@ -54,5 +54,17 @@ def calculateFitnessList(population):
         fitnessList.append(calculateFitnessOfHand(hand))
 
 def calculateFitnessOfHand(hand):
-    
+    # royal flush
+    sortedHand = hand.sort()
+
+
+    # four of a kind
+    # straight flush
+    # full house
+    # flush
+    # straight
+    # three of a kind
+    # two pair
+    # pair
+
 main()
