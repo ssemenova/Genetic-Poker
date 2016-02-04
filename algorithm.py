@@ -1,81 +1,110 @@
+from __future__ import division # floating point division instead of integer division, which is the default in python 2
 from hand import hand
-import random
+from numpy.random import choice # used to make a weighted random choice for parents
+import random # random number generator
+import copy # create copy of object
 
 def main():
     # variables to play around with
     populationSize = 200
-    generations = 2
-    parents = 100
+    generations = 300
+    numParents = int(populationSize / 2)
+
+    # STEP 1: Generate population
+    population = []
+    for i in range(populationSize):
+        population.append(hand())
 
     # loop through generations
     for gen in range(generations):
-        population = []
-
-        # STEP 1: Generate population
-        for i in range(populationSize):
-            population.append(hand())
-
         # STEP 2: Calculate fitness of each hand and average population fitness
-        calculatePopulationFitness(population, populationSize, gen)
+        probabilityList = calculatePopulationFitness(population, populationSize, gen)
 
         # STEP 3: Select parents for next generation
-        # sort by fitness
+        # sort in reverse order of fitness
         population.sort(key=lambda hand: hand.fitness, reverse=True)
-        # create spinner
-        spinner = createSpinner(population)
         # choose parents
+        parents = []
+        for i in range(numParents):
+            # choose random parent, giving weight to their fitness
+            newParent = choice(population, p = probabilityList)
+            parents.append(newParent)
 
-# Create and return a "spinner"
-def createSpinner(population):
-    spinner = []
-    start = 0
-    for hand in population:
-        fitness = hand.fitness
-        spinner.append((start, start + fitness, hand))
-        start += fitness
-    return spinner
+        # STEP 4: Reproduce with 80% crossover, 10% mutation, and 10% elitism
+        # new population becomes the result of reproduction
+        # start with no children
+        population = []
+        # mutation 10% of the time:
+        # creating .1 * populationSize children
+        for i in range(int(.1 * populationSize)):
+            population.append(mutate(parents))
 
-def selectParents(spinner, phi):
-    step = 1/phi
+        # elitism 10% of the time:
+        for i in range(int(.1 * populationSize) - 1):
+            population.append(elitism(parents))
 
-def binSearch(wheel, num):
-    mid = len(wheel)//2
-    low, high, answer = wheel[mid]
-    if low<=num<=high:
-        return answer
-    elif low > num:
-        return binSearch(wheel[mid+1:], num)
-    else:
-        return binSearch(wheel[:mid], num)
+        # crossover 80%
+        for i in range(int(.8 * populationSize)):
+            population.append(crossover(parents))
 
-def select(wheel, N):
-    stepSize = 1.0/N
-    answer = []
-    r = random.random()
-    answer.append(binSearch(wheel, r))
-    while len(answer) < N:
-        r += stepSize
-        if r>1:
-            r %= 1
-        answer.append(binSearch(wheel, r))
-    return answer
+    print "Final generation"
+    calculatePopulationFitness(population, populationSize, generations)
 
 # Calculate the fitness of each hand in the population
 # Calculate and print average fitness of the population
 # Determine and print the hand that has the maximum fitness
 def calculatePopulationFitness(population, populationSize, gen):
-    fitnessAvg = 0
-    currScore = 0
-    maxFitness = 0
-    maxFitnessHand = population[0]
+    maxFitness = 0 # maximum fitness of a hand
+    maxFitnessHand = population[0] # hand that has the maximum fitness
+    oddsList = [] # list of probabilities associated with a hand .. needed to make the choice of parents
+
     for currentHand in population:
         currScore = currentHand.calculateFitness()
-        fitnessAvg += currScore
+        oddsList.append(currScore)
         if currScore > maxFitness:
             maxFitness = currScore
             maxFitnessHand = currentHand
-    fitnessAvg = fitnessAvg / populationSize
-    print 'Fitness Score for Generation #' + str(gen) + ' = ' + str(fitnessAvg)
+
+    totalFitness = sum(oddsList)
+
+    # scaling probabilities so they all add up to one
+    sum2 = 0
+    probabilityList = [float(i)/totalFitness for i in oddsList]
+    probabilityList.sort(reverse=True)
+
+    print 'Fitness Score for Generation #' + str(gen) + ' = ' + str(totalFitness / populationSize)
     print '    Maximum fitness is ' + str(maxFitness) + " for the hand " + maxFitnessHand.__str__()
+
+    return probabilityList
+
+# mutates a child from a random parent
+def mutate(parents):
+    # pick random parent
+    parent = parents[random.randrange(1, len(parents))]
+    # copy parent's information to the child
+    child = copy.deepcopy(parent)
+    # mutate the child
+    child.mutate()
+    return child
+
+# creates a child that is a clone of the parent
+def elitism(parents):
+    # pick random parent
+    parent = parents[random.randrange(1, len(parents))]
+    # copy parent's information to child
+    child = copy.deepcopy(parent)
+    return child
+
+# creates a child that is a combination of both parents
+def crossover(parents):
+    legal = False
+    while not legal:
+        # pick two random parents
+        parent1 = parents[random.randrange(1, len(parents))]
+        parent2 = parents[random.randrange(1, len(parents))]
+        index = random.randrange(0,4)
+        child = hand(parent1.cards[0:index] + parent2.cards[index:5])
+        legal = child.checkLegality(child.cards)
+    return child
 
 main()
