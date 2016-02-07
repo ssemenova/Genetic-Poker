@@ -73,8 +73,8 @@ class hand( object ) :
                 # some math trickery so if we try to make a card number 15, it'll wrap around to 2
                 self.cards[mutateIndex][typeOrSuit] = (mutatedCard + amountToMutate) % 13
             else:
-                # no negative card numbers allowed, either
-                self.cards[mutateIndex][typeOrSuit] = abs(mutatedCard - amountToMutate)
+                # some more math trickery to wrap around
+                self.cards[mutateIndex][typeOrSuit] = (13 + (mutatedCard - amountToMutate)) % 13
             legal = self.checkLegality(self.cards)
 
     # calculates a fitness score for the hand, saves it to the fitness variable, and returns the #

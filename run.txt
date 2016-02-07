@@ -1,0 +1,606 @@
+Example run:
+
+>> python algorithm.py
+Fitness Score for Generation #0 = 31.45
+    Maximum fitness is 70 for the hand [6, 3] [6, 4] [13, 1] [13, 2] [13, 3]
+Fitness Score for Generation #1 = 31.0
+    Maximum fitness is 40 for the hand [1, 2] [1, 4] [7, 2] [7, 4] [9, 2]
+Fitness Score for Generation #2 = 31.025
+    Maximum fitness is 45 for the hand [7, 3] [8, 3] [9, 1] [9, 2] [9, 3]
+Fitness Score for Generation #3 = 31.875
+    Maximum fitness is 45 for the hand [3, 1] [3, 3] [3, 4] [5, 4] [7, 4]
+Fitness Score for Generation #4 = 32.475
+    Maximum fitness is 70 for the hand [7, 2] [7, 3] [7, 4] [11, 1] [11, 3]
+Fitness Score for Generation #5 = 33.675
+    Maximum fitness is 70 for the hand [7, 2] [7, 3] [7, 4] [11, 1] [11, 3]
+Fitness Score for Generation #6 = 36.0
+    Maximum fitness is 70 for the hand [7, 2] [7, 3] [7, 4] [11, 3] [11, 11]
+Fitness Score for Generation #7 = 37.15
+    Maximum fitness is 70 for the hand [7, 3] [7, 4] [7, 11] [11, 1] [11, 3]
+Fitness Score for Generation #8 = 38.825
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [7, 2] [7, 3] [7, 7]
+Fitness Score for Generation #9 = 40.425
+    Maximum fitness is 70 for the hand [3, 3] [3, 4] [5, 2] [5, 3] [5, 7]
+Fitness Score for Generation #10 = 41.4
+    Maximum fitness is 70 for the hand [3, 3] [3, 4] [5, 1] [5, 3] [5, 11]
+Fitness Score for Generation #11 = 41.625
+    Maximum fitness is 70 for the hand [7, 2] [7, 4] [7, 12] [11, 0] [11, 11]
+Fitness Score for Generation #12 = 45.05
+    Maximum fitness is 70 for the hand [3, 3] [3, 4] [5, 1] [5, 5] [5, 6]
+Fitness Score for Generation #13 = 46.5
+    Maximum fitness is 70 for the hand [5, 1] [5, 2] [5, 5] [7, 0] [7, 2]
+Fitness Score for Generation #14 = 48.65
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [7, 2] [7, 3] [7, 11]
+Fitness Score for Generation #15 = 53.125
+    Maximum fitness is 70 for the hand [5, 3] [5, 11] [7, 2] [7, 4] [7, 12]
+Fitness Score for Generation #16 = 52.875
+    Maximum fitness is 70 for the hand [5, 1] [5, 7] [5, 12] [7, 2] [7, 3]
+Fitness Score for Generation #17 = 51.65
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 4] [7, 3] [7, 7]
+Fitness Score for Generation #18 = 53.65
+    Maximum fitness is 70 for the hand [5, 3] [5, 11] [7, 2] [7, 3] [7, 7]
+Fitness Score for Generation #19 = 53.85
+    Maximum fitness is 70 for the hand [3, 3] [3, 7] [7, 1] [7, 3] [7, 7]
+Fitness Score for Generation #20 = 56.4
+    Maximum fitness is 70 for the hand [3, 4] [3, 6] [5, 1] [5, 2] [5, 6]
+Fitness Score for Generation #21 = 58.7
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [5, 5] [11, 1] [11, 3]
+Fitness Score for Generation #22 = 58.1
+    Maximum fitness is 70 for the hand [5, 3] [5, 5] [7, 1] [7, 2] [7, 3]
+Fitness Score for Generation #23 = 57.25
+    Maximum fitness is 70 for the hand [3, 5] [3, 12] [7, 2] [7, 4] [7, 12]
+Fitness Score for Generation #24 = 59.675
+    Maximum fitness is 70 for the hand [5, 2] [5, 5] [5, 7] [7, 2] [7, 3]
+Fitness Score for Generation #25 = 62.425
+    Maximum fitness is 70 for the hand [3, 3] [3, 4] [7, 2] [7, 3] [7, 12]
+Fitness Score for Generation #26 = 64.55
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 5] [7, 4] [7, 8]
+Fitness Score for Generation #27 = 64.05
+    Maximum fitness is 70 for the hand [5, 1] [5, 2] [7, 3] [7, 5] [7, 12]
+Fitness Score for Generation #28 = 64.35
+    Maximum fitness is 70 for the hand [3, 3] [3, 4] [7, 1] [7, 5] [7, 12]
+Fitness Score for Generation #29 = 64.8
+    Maximum fitness is 70 for the hand [5, 1] [5, 2] [5, 5] [7, 4] [7, 11]
+Fitness Score for Generation #30 = 65.975
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [5, 6] [7, 2] [7, 8]
+Fitness Score for Generation #31 = 63.425
+    Maximum fitness is 70 for the hand [5, 1] [5, 2] [7, 2] [7, 3] [7, 4]
+Fitness Score for Generation #32 = 63.775
+    Maximum fitness is 70 for the hand [5, 1] [5, 2] [5, 3] [7, 3] [7, 12]
+Fitness Score for Generation #33 = 61.6
+    Maximum fitness is 70 for the hand [5, 1] [5, 2] [5, 5] [7, 3] [7, 11]
+Fitness Score for Generation #34 = 63.775
+    Maximum fitness is 70 for the hand [3, 3] [3, 4] [7, 1] [7, 4] [7, 8]
+Fitness Score for Generation #35 = 63.85
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 2] [7, 3] [7, 12]
+Fitness Score for Generation #36 = 64.075
+    Maximum fitness is 70 for the hand [5, 1] [5, 2] [5, 5] [7, 0] [7, 12]
+Fitness Score for Generation #37 = 65.25
+    Maximum fitness is 70 for the hand [5, 0] [5, 2] [5, 5] [7, 4] [7, 6]
+Fitness Score for Generation #38 = 65.775
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 11] [7, 2] [7, 9]
+Fitness Score for Generation #39 = 65.55
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 7] [7, 4] [7, 6]
+Fitness Score for Generation #40 = 67.275
+    Maximum fitness is 70 for the hand [5, 3] [5, 4] [7, 1] [7, 4] [7, 6]
+Fitness Score for Generation #41 = 66.575
+    Maximum fitness is 70 for the hand [5, 3] [5, 5] [5, 9] [7, 2] [7, 8]
+Fitness Score for Generation #42 = 66.3
+    Maximum fitness is 70 for the hand [5, 1] [5, 2] [5, 8] [7, 9] [7, 11]
+Fitness Score for Generation #43 = 66.175
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [5, 5] [7, 0] [7, 6]
+Fitness Score for Generation #44 = 68.05
+    Maximum fitness is 70 for the hand [5, 1] [5, 5] [7, 1] [7, 3] [7, 12]
+Fitness Score for Generation #45 = 66.025
+    Maximum fitness is 70 for the hand [5, 0] [5, 3] [7, 1] [7, 4] [7, 6]
+Fitness Score for Generation #46 = 66.0
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 4] [7, 1] [7, 9]
+Fitness Score for Generation #47 = 65.0
+    Maximum fitness is 70 for the hand [5, 0] [5, 1] [5, 5] [7, 3] [7, 12]
+Fitness Score for Generation #48 = 66.2
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 4] [7, 3] [7, 12]
+Fitness Score for Generation #49 = 64.7
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [5, 4] [7, 1] [7, 6]
+Fitness Score for Generation #50 = 67.05
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 1] [7, 9] [7, 11]
+Fitness Score for Generation #51 = 67.525
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [5, 5] [7, 1] [7, 6]
+Fitness Score for Generation #52 = 66.35
+    Maximum fitness is 70 for the hand [5, 1] [5, 11] [7, 1] [7, 10] [7, 11]
+Fitness Score for Generation #53 = 65.575
+    Maximum fitness is 70 for the hand [5, 2] [5, 6] [5, 11] [7, 6] [7, 8]
+Fitness Score for Generation #54 = 65.3
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 4] [7, 3] [7, 12]
+Fitness Score for Generation #55 = 65.575
+    Maximum fitness is 70 for the hand [5, 0] [5, 3] [5, 4] [7, 4] [7, 6]
+Fitness Score for Generation #56 = 65.65
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [7, 2] [7, 4] [7, 6]
+Fitness Score for Generation #57 = 66.35
+    Maximum fitness is 70 for the hand [5, 1] [5, 5] [7, 1] [7, 2] [7, 8]
+Fitness Score for Generation #58 = 66.375
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 4] [7, 10] [7, 11]
+Fitness Score for Generation #59 = 64.7
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [5, 6] [7, 1] [7, 10]
+Fitness Score for Generation #60 = 67.15
+    Maximum fitness is 70 for the hand [5, 4] [5, 6] [5, 7] [7, 7] [7, 11]
+Fitness Score for Generation #61 = 65.075
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [7, 1] [7, 4] [7, 8]
+Fitness Score for Generation #62 = 66.8
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [5, 11] [7, 3] [7, 8]
+Fitness Score for Generation #63 = 66.0
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 0] [7, 1] [7, 11]
+Fitness Score for Generation #64 = 66.3
+    Maximum fitness is 70 for the hand [5, 3] [5, 12] [7, 1] [7, 3] [7, 12]
+Fitness Score for Generation #65 = 66.2
+    Maximum fitness is 70 for the hand [5, 3] [5, 4] [7, 2] [7, 4] [7, 7]
+Fitness Score for Generation #66 = 66.6
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [7, 6] [7, 11] [7, 12]
+Fitness Score for Generation #67 = 65.2
+    Maximum fitness is 70 for the hand [5, 2] [5, 7] [7, 1] [7, 3] [7, 12]
+Fitness Score for Generation #68 = 66.35
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 4] [7, 4] [7, 8]
+Fitness Score for Generation #69 = 66.8
+    Maximum fitness is 70 for the hand [5, 0] [5, 2] [5, 7] [7, 3] [7, 12]
+Fitness Score for Generation #70 = 66.8
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [5, 9] [7, 5] [7, 6]
+Fitness Score for Generation #71 = 66.55
+    Maximum fitness is 70 for the hand [5, 2] [5, 12] [7, 1] [7, 3] [7, 12]
+Fitness Score for Generation #72 = 66.625
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [7, 4] [7, 7] [7, 12]
+Fitness Score for Generation #73 = 65.425
+    Maximum fitness is 70 for the hand [5, 1] [5, 5] [7, 1] [7, 4] [7, 6]
+Fitness Score for Generation #74 = 66.65
+    Maximum fitness is 70 for the hand [5, 3] [5, 7] [5, 9] [7, 4] [7, 6]
+Fitness Score for Generation #75 = 65.625
+    Maximum fitness is 70 for the hand [5, 1] [5, 2] [5, 4] [7, 4] [7, 6]
+Fitness Score for Generation #76 = 64.15
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 0] [7, 3] [7, 4]
+Fitness Score for Generation #77 = 64.625
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [5, 7] [7, 5] [7, 8]
+Fitness Score for Generation #78 = 66.4
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 5] [7, 8] [7, 12]
+Fitness Score for Generation #79 = 66.475
+    Maximum fitness is 70 for the hand [5, 5] [5, 8] [7, 1] [7, 7] [7, 12]
+Fitness Score for Generation #80 = 66.2
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 4] [7, 6] [7, 7]
+Fitness Score for Generation #81 = 66.3
+    Maximum fitness is 70 for the hand [5, 0] [5, 4] [7, 1] [7, 3] [7, 4]
+Fitness Score for Generation #82 = 67.2
+    Maximum fitness is 70 for the hand [5, 2] [5, 6] [5, 10] [7, 9] [7, 10]
+Fitness Score for Generation #83 = 67.4
+    Maximum fitness is 70 for the hand [5, 0] [5, 2] [5, 4] [7, 9] [7, 11]
+Fitness Score for Generation #84 = 68.775
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 1] [7, 4] [7, 9]
+Fitness Score for Generation #85 = 68.275
+    Maximum fitness is 70 for the hand [5, 4] [5, 5] [5, 8] [7, 7] [7, 12]
+Fitness Score for Generation #86 = 67.475
+    Maximum fitness is 70 for the hand [5, 2] [5, 5] [7, 0] [7, 4] [7, 6]
+Fitness Score for Generation #87 = 65.6
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [5, 10] [7, 4] [7, 7]
+Fitness Score for Generation #88 = 67.3
+    Maximum fitness is 70 for the hand [5, 3] [5, 5] [7, 1] [7, 3] [7, 6]
+Fitness Score for Generation #89 = 68.125
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [5, 4] [7, 0] [7, 4]
+Fitness Score for Generation #90 = 67.2
+    Maximum fitness is 70 for the hand [5, 2] [5, 5] [7, 3] [7, 4] [7, 6]
+Fitness Score for Generation #91 = 66.8
+    Maximum fitness is 70 for the hand [5, 2] [5, 5] [7, 1] [7, 7] [7, 10]
+Fitness Score for Generation #92 = 66.25
+    Maximum fitness is 70 for the hand [5, 2] [5, 8] [7, 1] [7, 3] [7, 12]
+Fitness Score for Generation #93 = 65.65
+    Maximum fitness is 70 for the hand [5, 2] [5, 10] [5, 12] [7, 5] [7, 6]
+Fitness Score for Generation #94 = 64.5
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 3] [7, 4] [7, 6]
+Fitness Score for Generation #95 = 65.925
+    Maximum fitness is 70 for the hand [5, 0] [5, 11] [7, 0] [7, 1] [7, 6]
+Fitness Score for Generation #96 = 66.225
+    Maximum fitness is 70 for the hand [5, 3] [5, 4] [5, 5] [7, 4] [7, 6]
+Fitness Score for Generation #97 = 65.7
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [7, 1] [7, 4] [7, 6]
+Fitness Score for Generation #98 = 67.7
+    Maximum fitness is 70 for the hand [5, 2] [5, 6] [7, 1] [7, 4] [7, 6]
+Fitness Score for Generation #99 = 67.675
+    Maximum fitness is 70 for the hand [5, 0] [5, 3] [5, 4] [7, 4] [7, 9]
+Fitness Score for Generation #100 = 66.725
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 2] [7, 3] [7, 6]
+Fitness Score for Generation #101 = 66.925
+    Maximum fitness is 70 for the hand [5, 2] [5, 5] [7, 0] [7, 4] [7, 6]
+Fitness Score for Generation #102 = 66.4
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [5, 6] [7, 3] [7, 4]
+Fitness Score for Generation #103 = 67.5
+    Maximum fitness is 70 for the hand [5, 3] [5, 6] [5, 8] [7, 3] [7, 4]
+Fitness Score for Generation #104 = 66.5
+    Maximum fitness is 70 for the hand [5, 2] [5, 6] [7, 1] [7, 3] [7, 4]
+Fitness Score for Generation #105 = 64.975
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [5, 12] [7, 2] [7, 4]
+Fitness Score for Generation #106 = 65.175
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 1] [7, 2] [7, 6]
+Fitness Score for Generation #107 = 65.825
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 3] [7, 4] [7, 6]
+Fitness Score for Generation #108 = 67.075
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [5, 6] [7, 4] [7, 8]
+Fitness Score for Generation #109 = 67.3
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 1] [7, 3] [7, 8]
+Fitness Score for Generation #110 = 68.375
+    Maximum fitness is 70 for the hand [5, 1] [5, 7] [7, 3] [7, 4] [7, 9]
+Fitness Score for Generation #111 = 67.775
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 3] [7, 4] [7, 6]
+Fitness Score for Generation #112 = 66.3
+    Maximum fitness is 70 for the hand [5, 0] [5, 5] [5, 10] [7, 4] [7, 6]
+Fitness Score for Generation #113 = 66.7
+    Maximum fitness is 70 for the hand [5, 4] [5, 5] [7, 0] [7, 4] [7, 6]
+Fitness Score for Generation #114 = 64.675
+    Maximum fitness is 70 for the hand [5, 2] [5, 5] [5, 6] [7, 3] [7, 4]
+Fitness Score for Generation #115 = 65.625
+    Maximum fitness is 70 for the hand [5, 3] [5, 6] [5, 10] [7, 4] [7, 6]
+Fitness Score for Generation #116 = 65.975
+    Maximum fitness is 70 for the hand [5, 0] [5, 3] [7, 2] [7, 3] [7, 6]
+Fitness Score for Generation #117 = 65.925
+    Maximum fitness is 70 for the hand [5, 2] [5, 7] [7, 1] [7, 4] [7, 6]
+Fitness Score for Generation #118 = 65.9
+    Maximum fitness is 70 for the hand [5, 1] [5, 11] [7, 3] [7, 4] [7, 6]
+Fitness Score for Generation #119 = 66.8
+    Maximum fitness is 70 for the hand [5, 4] [5, 5] [7, 0] [7, 4] [7, 6]
+Fitness Score for Generation #120 = 68.325
+    Maximum fitness is 70 for the hand [5, 0] [5, 1] [5, 11] [7, 4] [7, 7]
+Fitness Score for Generation #121 = 66.725
+    Maximum fitness is 70 for the hand [5, 2] [5, 10] [7, 4] [7, 6] [7, 8]
+Fitness Score for Generation #122 = 67.125
+    Maximum fitness is 70 for the hand [5, 2] [5, 8] [5, 10] [7, 4] [7, 5]
+Fitness Score for Generation #123 = 66.225
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [7, 0] [7, 2] [7, 8]
+Fitness Score for Generation #124 = 65.65
+    Maximum fitness is 70 for the hand [5, 0] [5, 3] [7, 0] [7, 4] [7, 9]
+Fitness Score for Generation #125 = 66.375
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [5, 6] [7, 0] [7, 8]
+Fitness Score for Generation #126 = 67.175
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 11] [7, 4] [7, 7]
+Fitness Score for Generation #127 = 66.65
+    Maximum fitness is 70 for the hand [5, 3] [5, 4] [7, 1] [7, 4] [7, 6]
+Fitness Score for Generation #128 = 65.7
+    Maximum fitness is 70 for the hand [5, 2] [5, 8] [5, 10] [7, 4] [7, 6]
+Fitness Score for Generation #129 = 66.075
+    Maximum fitness is 70 for the hand [5, 4] [5, 5] [7, 0] [7, 6] [7, 8]
+Fitness Score for Generation #130 = 64.6
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 3] [7, 4] [7, 5]
+Fitness Score for Generation #131 = 68.45
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [7, 0] [7, 4] [7, 8]
+Fitness Score for Generation #132 = 67.05
+    Maximum fitness is 70 for the hand [5, 2] [5, 12] [7, 0] [7, 2] [7, 3]
+Fitness Score for Generation #133 = 66.025
+    Maximum fitness is 70 for the hand [5, 3] [5, 7] [7, 0] [7, 4] [7, 9]
+Fitness Score for Generation #134 = 65.3
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [7, 0] [7, 4] [7, 8]
+Fitness Score for Generation #135 = 66.325
+    Maximum fitness is 70 for the hand [5, 2] [5, 6] [7, 0] [7, 3] [7, 4]
+Fitness Score for Generation #136 = 67.375
+    Maximum fitness is 70 for the hand [5, 3] [5, 5] [7, 0] [7, 6] [7, 8]
+Fitness Score for Generation #137 = 67.225
+    Maximum fitness is 70 for the hand [5, 3] [5, 12] [7, 0] [7, 4] [7, 9]
+Fitness Score for Generation #138 = 65.05
+    Maximum fitness is 70 for the hand [5, 3] [5, 6] [7, 1] [7, 3] [7, 4]
+Fitness Score for Generation #139 = 66.175
+    Maximum fitness is 70 for the hand [5, 1] [5, 9] [7, 0] [7, 6] [7, 8]
+Fitness Score for Generation #140 = 65.1
+    Maximum fitness is 70 for the hand [5, 2] [5, 12] [7, 3] [7, 4] [7, 7]
+Fitness Score for Generation #141 = 64.875
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 10] [7, 6] [7, 8]
+Fitness Score for Generation #142 = 66.5
+    Maximum fitness is 70 for the hand [5, 3] [5, 6] [7, 0] [7, 6] [7, 8]
+Fitness Score for Generation #143 = 64.75
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [5, 12] [7, 6] [7, 7]
+Fitness Score for Generation #144 = 66.0
+    Maximum fitness is 70 for the hand [5, 3] [5, 4] [7, 0] [7, 6] [7, 8]
+Fitness Score for Generation #145 = 65.7
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [7, 4] [7, 7] [7, 10]
+Fitness Score for Generation #146 = 65.25
+    Maximum fitness is 70 for the hand [5, 3] [5, 6] [7, 4] [7, 7] [7, 8]
+Fitness Score for Generation #147 = 64.175
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [5, 6] [7, 4] [7, 7]
+Fitness Score for Generation #148 = 64.9
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [7, 0] [7, 7] [7, 8]
+Fitness Score for Generation #149 = 62.05
+    Maximum fitness is 70 for the hand [5, 3] [5, 6] [7, 0] [7, 2] [7, 6]
+Fitness Score for Generation #150 = 65.025
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [5, 11] [7, 8] [7, 9]
+Fitness Score for Generation #151 = 67.25
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 0] [7, 6] [7, 9]
+Fitness Score for Generation #152 = 67.825
+    Maximum fitness is 70 for the hand [5, 3] [5, 8] [5, 9] [7, 6] [7, 9]
+Fitness Score for Generation #153 = 67.475
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 6] [7, 8] [7, 10]
+Fitness Score for Generation #154 = 67.75
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 1] [7, 7] [7, 10]
+Fitness Score for Generation #155 = 67.925
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [7, 0] [7, 6] [7, 8]
+Fitness Score for Generation #156 = 66.1
+    Maximum fitness is 70 for the hand [5, 3] [5, 6] [5, 11] [7, 6] [7, 8]
+Fitness Score for Generation #157 = 66.6
+    Maximum fitness is 70 for the hand [5, 3] [5, 10] [5, 11] [7, 4] [7, 5]
+Fitness Score for Generation #158 = 67.375
+    Maximum fitness is 70 for the hand [5, 3] [5, 7] [5, 10] [7, 0] [7, 12]
+Fitness Score for Generation #159 = 67.125
+    Maximum fitness is 70 for the hand [5, 0] [5, 1] [5, 11] [7, 4] [7, 8]
+Fitness Score for Generation #160 = 65.875
+    Maximum fitness is 70 for the hand [5, 2] [5, 7] [5, 11] [7, 4] [7, 8]
+Fitness Score for Generation #161 = 66.65
+    Maximum fitness is 70 for the hand [5, 0] [5, 2] [5, 4] [7, 6] [7, 8]
+Fitness Score for Generation #162 = 66.875
+    Maximum fitness is 70 for the hand [5, 0] [5, 8] [7, 3] [7, 4] [7, 8]
+Fitness Score for Generation #163 = 66.875
+    Maximum fitness is 70 for the hand [5, 0] [5, 4] [7, 3] [7, 7] [7, 10]
+Fitness Score for Generation #164 = 66.625
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [5, 11] [7, 3] [7, 8]
+Fitness Score for Generation #165 = 68.825
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [5, 11] [7, 6] [7, 9]
+Fitness Score for Generation #166 = 67.9
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 3] [7, 5] [7, 8]
+Fitness Score for Generation #167 = 67.55
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [7, 4] [7, 6] [7, 8]
+Fitness Score for Generation #168 = 67.45
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [7, 0] [7, 3] [7, 8]
+Fitness Score for Generation #169 = 68.55
+    Maximum fitness is 70 for the hand [5, 4] [5, 9] [5, 11] [7, 5] [7, 12]
+Fitness Score for Generation #170 = 67.975
+    Maximum fitness is 70 for the hand [5, 6] [5, 9] [7, 2] [7, 5] [7, 12]
+Fitness Score for Generation #171 = 67.25
+    Maximum fitness is 70 for the hand [5, 2] [5, 3] [7, 3] [7, 6] [7, 7]
+Fitness Score for Generation #172 = 67.225
+    Maximum fitness is 70 for the hand [5, 2] [5, 6] [7, 1] [7, 6] [7, 8]
+Fitness Score for Generation #173 = 66.55
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 0] [7, 5] [7, 6]
+Fitness Score for Generation #174 = 66.575
+    Maximum fitness is 70 for the hand [5, 4] [5, 5] [7, 0] [7, 6] [7, 8]
+Fitness Score for Generation #175 = 66.625
+    Maximum fitness is 70 for the hand [5, 2] [5, 7] [7, 3] [7, 6] [7, 11]
+Fitness Score for Generation #176 = 66.7
+    Maximum fitness is 70 for the hand [5, 7] [5, 8] [5, 12] [7, 3] [7, 8]
+Fitness Score for Generation #177 = 67.35
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 0] [7, 7] [7, 8]
+Fitness Score for Generation #178 = 66.675
+    Maximum fitness is 70 for the hand [5, 3] [5, 4] [5, 11] [7, 8] [7, 9]
+Fitness Score for Generation #179 = 65.55
+    Maximum fitness is 70 for the hand [5, 0] [5, 3] [5, 10] [7, 4] [7, 7]
+Fitness Score for Generation #180 = 68.075
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [7, 2] [7, 6] [7, 9]
+Fitness Score for Generation #181 = 64.9
+    Maximum fitness is 70 for the hand [5, 4] [5, 6] [7, 3] [7, 6] [7, 11]
+Fitness Score for Generation #182 = 66.2
+    Maximum fitness is 70 for the hand [5, 2] [5, 8] [7, 0] [7, 7] [7, 8]
+Fitness Score for Generation #183 = 66.275
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [7, 0] [7, 4] [7, 8]
+Fitness Score for Generation #184 = 66.175
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 6] [7, 7] [7, 11]
+Fitness Score for Generation #185 = 66.3
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [7, 8] [7, 9] [7, 12]
+Fitness Score for Generation #186 = 64.875
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 2] [7, 3] [7, 9]
+Fitness Score for Generation #187 = 63.9
+    Maximum fitness is 70 for the hand [5, 8] [5, 12] [7, 3] [7, 6] [7, 9]
+Fitness Score for Generation #188 = 63.35
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 0] [7, 2] [7, 5]
+Fitness Score for Generation #189 = 64.45
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [7, 0] [7, 8] [7, 12]
+Fitness Score for Generation #190 = 66.125
+    Maximum fitness is 70 for the hand [5, 0] [5, 2] [5, 6] [7, 5] [7, 6]
+Fitness Score for Generation #191 = 66.0
+    Maximum fitness is 70 for the hand [5, 0] [5, 2] [5, 8] [7, 8] [7, 10]
+Fitness Score for Generation #192 = 65.275
+    Maximum fitness is 70 for the hand [5, 8] [5, 12] [7, 0] [7, 9] [7, 10]
+Fitness Score for Generation #193 = 65.375
+    Maximum fitness is 70 for the hand [5, 2] [5, 6] [7, 2] [7, 6] [7, 9]
+Fitness Score for Generation #194 = 67.625
+    Maximum fitness is 70 for the hand [5, 2] [5, 6] [5, 8] [7, 5] [7, 8]
+Fitness Score for Generation #195 = 65.9
+    Maximum fitness is 70 for the hand [5, 0] [5, 8] [7, 3] [7, 5] [7, 12]
+Fitness Score for Generation #196 = 64.625
+    Maximum fitness is 70 for the hand [5, 0] [5, 5] [7, 0] [7, 1] [7, 3]
+Fitness Score for Generation #197 = 65.975
+    Maximum fitness is 70 for the hand [5, 0] [5, 2] [7, 3] [7, 5] [7, 12]
+Fitness Score for Generation #198 = 65.075
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [7, 2] [7, 6] [7, 10]
+Fitness Score for Generation #199 = 66.875
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [5, 5] [7, 8] [7, 9]
+Fitness Score for Generation #200 = 66.15
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [5, 8] [7, 2] [7, 9]
+Fitness Score for Generation #201 = 63.275
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [5, 8] [7, 1] [7, 5]
+Fitness Score for Generation #202 = 65.0
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 3] [7, 8] [7, 10]
+Fitness Score for Generation #203 = 64.575
+    Maximum fitness is 70 for the hand [5, 0] [5, 6] [7, 3] [7, 6] [7, 8]
+Fitness Score for Generation #204 = 64.9
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [7, 2] [7, 8] [7, 9]
+Fitness Score for Generation #205 = 66.5
+    Maximum fitness is 70 for the hand [5, 4] [5, 10] [7, 3] [7, 6] [7, 8]
+Fitness Score for Generation #206 = 67.05
+    Maximum fitness is 70 for the hand [5, 2] [5, 8] [7, 3] [7, 5] [7, 10]
+Fitness Score for Generation #207 = 67.15
+    Maximum fitness is 70 for the hand [5, 1] [5, 3] [5, 8] [7, 8] [7, 10]
+Fitness Score for Generation #208 = 66.275
+    Maximum fitness is 70 for the hand [5, 2] [5, 6] [5, 8] [7, 3] [7, 8]
+Fitness Score for Generation #209 = 66.025
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [7, 1] [7, 3] [7, 8]
+Fitness Score for Generation #210 = 66.4
+    Maximum fitness is 70 for the hand [5, 0] [5, 8] [7, 3] [7, 6] [7, 7]
+Fitness Score for Generation #211 = 66.8
+    Maximum fitness is 70 for the hand [5, 3] [5, 4] [7, 2] [7, 4] [7, 12]
+Fitness Score for Generation #212 = 67.1
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [7, 2] [7, 3] [7, 8]
+Fitness Score for Generation #213 = 67.45
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [5, 9] [7, 10] [7, 12]
+Fitness Score for Generation #214 = 67.65
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [5, 8] [7, 3] [7, 8]
+Fitness Score for Generation #215 = 66.075
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 3] [7, 4] [7, 8]
+Fitness Score for Generation #216 = 66.175
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [5, 9] [7, 8] [7, 10]
+Fitness Score for Generation #217 = 66.775
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 6] [7, 8] [7, 12]
+Fitness Score for Generation #218 = 66.95
+    Maximum fitness is 70 for the hand [5, 4] [5, 8] [7, 3] [7, 6] [7, 8]
+Fitness Score for Generation #219 = 67.725
+    Maximum fitness is 70 for the hand [5, 2] [5, 9] [5, 11] [7, 6] [7, 7]
+Fitness Score for Generation #220 = 67.725
+    Maximum fitness is 70 for the hand [5, 1] [5, 11] [7, 4] [7, 6] [7, 10]
+Fitness Score for Generation #221 = 66.05
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 1] [7, 6] [7, 12]
+Fitness Score for Generation #222 = 66.225
+    Maximum fitness is 70 for the hand [5, 2] [5, 6] [5, 12] [7, 2] [7, 12]
+Fitness Score for Generation #223 = 67.95
+    Maximum fitness is 70 for the hand [5, 0] [5, 4] [7, 1] [7, 4] [7, 12]
+Fitness Score for Generation #224 = 66.35
+    Maximum fitness is 70 for the hand [5, 1] [5, 2] [5, 9] [7, 8] [7, 10]
+Fitness Score for Generation #225 = 68.15
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [5, 12] [7, 5] [7, 9]
+Fitness Score for Generation #226 = 67.325
+    Maximum fitness is 70 for the hand [5, 1] [5, 10] [5, 12] [7, 1] [7, 6]
+Fitness Score for Generation #227 = 65.7
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 1] [7, 6] [7, 11]
+Fitness Score for Generation #228 = 64.975
+    Maximum fitness is 70 for the hand [5, 5] [5, 6] [7, 1] [7, 2] [7, 6]
+Fitness Score for Generation #229 = 65.475
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 2] [7, 6] [7, 12]
+Fitness Score for Generation #230 = 65.125
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 2] [7, 6] [7, 10]
+Fitness Score for Generation #231 = 62.9
+    Maximum fitness is 70 for the hand [5, 1] [5, 5] [7, 1] [7, 2] [7, 6]
+Fitness Score for Generation #232 = 63.1
+    Maximum fitness is 70 for the hand [5, 5] [5, 12] [7, 2] [7, 6] [7, 8]
+Fitness Score for Generation #233 = 62.6
+    Maximum fitness is 70 for the hand [5, 0] [5, 6] [7, 1] [7, 2] [7, 12]
+Fitness Score for Generation #234 = 63.225
+    Maximum fitness is 70 for the hand [5, 10] [5, 11] [7, 6] [7, 7] [7, 8]
+Fitness Score for Generation #235 = 63.375
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 1] [7, 11] [7, 12]
+Fitness Score for Generation #236 = 65.525
+    Maximum fitness is 70 for the hand [5, 2] [5, 12] [7, 1] [7, 6] [7, 12]
+Fitness Score for Generation #237 = 63.5
+    Maximum fitness is 70 for the hand [5, 1] [5, 5] [5, 12] [7, 2] [7, 12]
+Fitness Score for Generation #238 = 64.725
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [7, 1] [7, 7] [7, 12]
+Fitness Score for Generation #239 = 64.4
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 1] [7, 6] [7, 8]
+Fitness Score for Generation #240 = 64.0
+    Maximum fitness is 70 for the hand [5, 3] [5, 12] [7, 1] [7, 6] [7, 12]
+Fitness Score for Generation #241 = 64.95
+    Maximum fitness is 70 for the hand [5, 1] [5, 9] [7, 2] [7, 6] [7, 12]
+Fitness Score for Generation #242 = 66.4
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [5, 12] [7, 2] [7, 12]
+Fitness Score for Generation #243 = 67.15
+    Maximum fitness is 70 for the hand [5, 6] [5, 12] [7, 1] [7, 11] [7, 12]
+Fitness Score for Generation #244 = 67.15
+    Maximum fitness is 70 for the hand [5, 3] [5, 8] [5, 12] [7, 1] [7, 7]
+Fitness Score for Generation #245 = 66.575
+    Maximum fitness is 70 for the hand [5, 6] [5, 12] [7, 1] [7, 7] [7, 8]
+Fitness Score for Generation #246 = 66.525
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 0] [7, 6] [7, 12]
+Fitness Score for Generation #247 = 67.25
+    Maximum fitness is 70 for the hand [5, 3] [5, 6] [7, 4] [7, 8] [7, 12]
+Fitness Score for Generation #248 = 67.7
+    Maximum fitness is 70 for the hand [5, 6] [5, 12] [7, 6] [7, 10] [7, 12]
+Fitness Score for Generation #249 = 68.075
+    Maximum fitness is 70 for the hand [5, 3] [5, 12] [7, 1] [7, 6] [7, 12]
+Fitness Score for Generation #250 = 66.9
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 4] [7, 6] [7, 12]
+Fitness Score for Generation #251 = 67.05
+    Maximum fitness is 70 for the hand [5, 5] [5, 12] [7, 2] [7, 6] [7, 12]
+Fitness Score for Generation #252 = 67.35
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 3] [7, 6] [7, 12]
+Fitness Score for Generation #253 = 68.525
+    Maximum fitness is 70 for the hand [5, 2] [5, 12] [7, 1] [7, 4] [7, 8]
+Fitness Score for Generation #254 = 68.325
+    Maximum fitness is 70 for the hand [5, 1] [5, 9] [7, 3] [7, 6] [7, 12]
+Fitness Score for Generation #255 = 67.45
+    Maximum fitness is 70 for the hand [5, 4] [5, 12] [7, 0] [7, 6] [7, 10]
+Fitness Score for Generation #256 = 65.75
+    Maximum fitness is 70 for the hand [5, 1] [5, 7] [7, 1] [7, 6] [7, 12]
+Fitness Score for Generation #257 = 67.0
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 1] [7, 5] [7, 12]
+Fitness Score for Generation #258 = 67.2
+    Maximum fitness is 70 for the hand [5, 6] [5, 11] [7, 2] [7, 6] [7, 12]
+Fitness Score for Generation #259 = 68.2
+    Maximum fitness is 70 for the hand [5, 6] [5, 9] [7, 3] [7, 6] [7, 10]
+Fitness Score for Generation #260 = 67.575
+    Maximum fitness is 70 for the hand [5, 9] [5, 12] [7, 1] [7, 6] [7, 12]
+Fitness Score for Generation #261 = 67.125
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 2] [7, 9] [7, 12]
+Fitness Score for Generation #262 = 67.425
+    Maximum fitness is 70 for the hand [5, 4] [5, 12] [7, 2] [7, 4] [7, 8]
+Fitness Score for Generation #263 = 66.925
+    Maximum fitness is 70 for the hand [5, 8] [5, 10] [7, 5] [7, 9] [7, 12]
+Fitness Score for Generation #264 = 66.525
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [7, 0] [7, 2] [7, 11]
+Fitness Score for Generation #265 = 67.05
+    Maximum fitness is 70 for the hand [5, 6] [5, 9] [7, 3] [7, 7] [7, 12]
+Fitness Score for Generation #266 = 66.975
+    Maximum fitness is 70 for the hand [5, 3] [5, 8] [7, 5] [7, 11] [7, 12]
+Fitness Score for Generation #267 = 66.45
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [7, 3] [7, 6] [7, 12]
+Fitness Score for Generation #268 = 64.675
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [7, 2] [7, 6] [7, 11]
+Fitness Score for Generation #269 = 64.075
+    Maximum fitness is 70 for the hand [5, 6] [5, 7] [7, 1] [7, 6] [7, 11]
+Fitness Score for Generation #270 = 64.9
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 2] [7, 3] [7, 6]
+Fitness Score for Generation #271 = 66.975
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [7, 10] [7, 11] [7, 12]
+Fitness Score for Generation #272 = 67.925
+    Maximum fitness is 70 for the hand [5, 8] [5, 10] [7, 2] [7, 11] [7, 12]
+Fitness Score for Generation #273 = 66.575
+    Maximum fitness is 70 for the hand [5, 3] [5, 8] [7, 1] [7, 11] [7, 12]
+Fitness Score for Generation #274 = 66.025
+    Maximum fitness is 70 for the hand [5, 2] [5, 4] [7, 2] [7, 11] [7, 12]
+Fitness Score for Generation #275 = 66.125
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [7, 4] [7, 6] [7, 12]
+Fitness Score for Generation #276 = 65.475
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [5, 9] [7, 4] [7, 12]
+Fitness Score for Generation #277 = 63.5
+    Maximum fitness is 70 for the hand [5, 2] [5, 9] [5, 10] [7, 11] [7, 12]
+Fitness Score for Generation #278 = 63.325
+    Maximum fitness is 70 for the hand [5, 1] [5, 12] [7, 5] [7, 6] [7, 12]
+Fitness Score for Generation #279 = 64.65
+    Maximum fitness is 70 for the hand [5, 4] [5, 8] [7, 2] [7, 9] [7, 11]
+Fitness Score for Generation #280 = 65.05
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [7, 3] [7, 10] [7, 12]
+Fitness Score for Generation #281 = 65.65
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [5, 9] [7, 5] [7, 6]
+Fitness Score for Generation #282 = 65.725
+    Maximum fitness is 70 for the hand [5, 1] [5, 10] [7, 2] [7, 9] [7, 11]
+Fitness Score for Generation #283 = 66.9
+    Maximum fitness is 70 for the hand [5, 1] [5, 5] [5, 6] [7, 3] [7, 6]
+Fitness Score for Generation #284 = 66.95
+    Maximum fitness is 70 for the hand [5, 1] [5, 10] [7, 3] [7, 7] [7, 12]
+Fitness Score for Generation #285 = 66.925
+    Maximum fitness is 70 for the hand [5, 9] [5, 10] [7, 3] [7, 5] [7, 9]
+Fitness Score for Generation #286 = 67.925
+    Maximum fitness is 70 for the hand [5, 1] [5, 11] [7, 3] [7, 11] [7, 12]
+Fitness Score for Generation #287 = 68.05
+    Maximum fitness is 70 for the hand [5, 8] [5, 11] [7, 3] [7, 11] [7, 12]
+Fitness Score for Generation #288 = 67.75
+    Maximum fitness is 70 for the hand [5, 1] [5, 6] [5, 9] [7, 3] [7, 12]
+Fitness Score for Generation #289 = 66.75
+    Maximum fitness is 70 for the hand [5, 4] [5, 12] [7, 3] [7, 11] [7, 12]
+Fitness Score for Generation #290 = 67.75
+    Maximum fitness is 70 for the hand [5, 5] [5, 10] [7, 3] [7, 11] [7, 12]
+Fitness Score for Generation #291 = 65.75
+    Maximum fitness is 70 for the hand [5, 1] [5, 4] [5, 8] [7, 8] [7, 11]
+Fitness Score for Generation #292 = 66.675
+    Maximum fitness is 70 for the hand [5, 4] [5, 12] [7, 3] [7, 11] [7, 12]
+Fitness Score for Generation #293 = 67.775
+    Maximum fitness is 70 for the hand [5, 2] [5, 8] [7, 2] [7, 11] [7, 12]
+Fitness Score for Generation #294 = 67.925
+    Maximum fitness is 70 for the hand [5, 0] [5, 10] [7, 0] [7, 3] [7, 11]
+Fitness Score for Generation #295 = 67.925
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [7, 7] [7, 10] [7, 11]
+Fitness Score for Generation #296 = 67.4
+    Maximum fitness is 70 for the hand [5, 1] [5, 7] [7, 2] [7, 4] [7, 11]
+Fitness Score for Generation #297 = 67.85
+    Maximum fitness is 70 for the hand [5, 8] [5, 10] [7, 1] [7, 3] [7, 4]
+Fitness Score for Generation #298 = 67.725
+    Maximum fitness is 70 for the hand [5, 2] [5, 8] [7, 3] [7, 11] [7, 12]
+Fitness Score for Generation #299 = 66.85
+    Maximum fitness is 70 for the hand [5, 8] [5, 10] [7, 3] [7, 6] [7, 12]
+Final generation
+Fitness Score for Generation #300 = 66.525
+    Maximum fitness is 70 for the hand [5, 1] [5, 8] [7, 7] [7, 8] [7, 12]

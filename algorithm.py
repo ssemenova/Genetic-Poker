@@ -68,7 +68,6 @@ def calculatePopulationFitness(population, populationSize, gen):
     totalFitness = sum(oddsList)
 
     # scaling probabilities so they all add up to one
-    sum2 = 0
     probabilityList = [float(i)/totalFitness for i in oddsList]
     probabilityList.sort(reverse=True)
 
