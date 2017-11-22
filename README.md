@@ -1,8 +1,8 @@
-#Genetic Poker
+# Genetic Poker
 
 Written for a class about artificial life, where we were learning to create genetic algorithms. This program runs a genetic algorithm to evolve a population of poker hands.
 
-##Files
+## Files
 
 **Run.txt** is a sample run of the code
 
@@ -32,7 +32,7 @@ Algorithm.py has several variables up front that make manipulating the algorithm
   - generations, which I chose to be 300, but I found that increasing that number past 200 doesn't seem to affect the outcome much (the highest I tried was 2,000)
   - numParents, which I chose to be half the population size. I found that results are more interesting the more parents there are.
 
-##Observations
+## Observations
 
 I generally found that my algorithm doesn't produce interesting results. It seems to me that the true value of genetic algorithms isn't necessarily the end result, but the process of coding it and understanding the way your program evolves. Unfortunately, my program evolves pretty consistently mediocre hands. Most of the time, unless I'm lucky (luck doesn't count as evolution), the population will eventually converge at a fitness of about 50 or 60, occasionally 70. It will also converge to this pretty quickly ... in around 20 generations or so, and increasing the amount of generations doesn't seem to do much.
 
@@ -51,7 +51,7 @@ I think the best way to fix this is to add an intermediate fitness value which w
 The calculateFitness method inside hand.py is basically the "fitness function". Since poker hands are scored by the highest possible type they qualify for, I just check the hand for patterns that match poker hands starting from the best one (royal flush) to the worst one (pair). If none of the conditions are met, the hand is given a base score. The calculateFitness method itself is pretty long because it contains 9 different checks for 9 different hand types, which is pretty trivially done if you first sort the hand and check for matches. As a global variable, hand.py has fitnessScoreDistribution, which is just an easier way for me to change what each hand is scored to without having to go into the code. I found that I got different results based on what the score distribution is, and I believe that the best distribution is linear up until around "straight", where it shouldn't decrease as much. The distribution I chose for completing this project is 100, 90, 80, 70, 60, 50, 45, 40, 35, 30. You can see that at 50, the scores don't drop off as quickly.
 
 
-##Some other stuff:
+## Some other stuff:
 
 I import the following things to make the code work. 
 
